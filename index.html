@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Font Awesome -->
+    <!-- bootstrap, fontawesome, and internal stylesheet links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
     <script src="https://kit.fontawesome.com/fdf8c977f5.js" crossorigin="anonymous"></script>
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -24,10 +25,10 @@
     <main class="container dashboard">
         <div class="row p-2">
 
-            <!-- Right column with current weather and 5 day forecast -->
+            <!-- Right column - current weather and 5 day forecast -->
             <div class="col-sm-12 col-md-9 order-md-2">
                 <div class="row">
-            
+
                     <!-- Current Weather Forecast -->
                     <div class="col-12 currentWeather p-0">
                         <div class="d-flex cityName">
@@ -51,10 +52,10 @@
                                         <p class="card-title">Day 1</p>
                                         <img class="fiveDay-img mb-2" />
                                         <p class="card-subtitle mb-2 text-muted">Temp: <span
-                                        class="fiveDay-temp"></span>
-                                        &deg;F</p>
+                                                class="fiveDay-temp"></span>
+                                            &deg;F</p>
                                         <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                        class="fiveDay-humid"></span>%</p>
+                                                class="fiveDay-humid"></span>%</p>
                                     </div>
                                 </div>
                             </div>
@@ -65,10 +66,10 @@
                                         <p class="card-title">Day 2</p>
                                         <img class="fiveDay-img mb-2" />
                                         <p class="card-subtitle mb-2 text-muted">Temp: <span
-                                        class="fiveDay-temp"></span>
-                                        &deg;F</p>
+                                                class="fiveDay-temp"></span>
+                                            &deg;F</p>
                                         <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                        class="fiveDay-humid"></span>%</p>
+                                                class="fiveDay-humid"></span>%</p>
                                     </div>
                                 </div>
                             </div>
@@ -79,10 +80,10 @@
                                         <p class="card-title">Day 3</p>
                                         <img class="fiveDay-img mb-2" />
                                         <p class="card-subtitle mb-2 text-muted">Temp: <span
-                                        class="fiveDay-temp"></span>
-                                        &deg;F</p>
+                                                class="fiveDay-temp"></span>
+                                            &deg;F</p>
                                         <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                        class="fiveDay-humid"></span>%</p>
+                                                class="fiveDay-humid"></span>%</p>
                                     </div>
                                 </div>
                             </div>
@@ -93,10 +94,10 @@
                                         <p class="card-title">Day 4</p>
                                         <img class="fiveDay-img mb-2" />
                                         <p class="card-subtitle mb-2 text-muted">Temp: <span
-                                        class="fiveDay-temp"></span>
-                                        &deg;F</p>
+                                                class="fiveDay-temp"></span>
+                                            &deg;F</p>
                                         <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                        class="fiveDay-humid"></span>%</p>
+                                                class="fiveDay-humid"></span>%</p>
                                     </div>
                                 </div>
                             </div>
@@ -108,18 +109,18 @@
                                         <p class="card-title">Day 5</p>
                                         <img class="fiveDay-img mb-2" />
                                         <p class="card-subtitle mb-2 text-muted">
-                                        Temp: <span class="fiveDay-temp"></span> &deg;F</p>
+                                            Temp: <span class="fiveDay-temp"></span> &deg;F</p>
                                         <p class="card-subtitle mb-2 text-muted">Humidity: <span
-                                        class="fiveDay-humid"></span>%</p>
+                                                class="fiveDay-humid"></span>%</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>    
-                    </div> 
+                        </div>
+                    </div>
                 </div>
-            </div>           
+            </div>
 
-            <!-- Left column - city search form and previously searched cities list -->
+            <!-- Left column - city search and list -->
             <div class="col-sm-12 col-md-3 left-panel order-md-1">
                 <form>
                     <div class="form-row">
@@ -128,32 +129,31 @@
                             <input type="text" placeholder="City" class="form-control" id="city-input">
                         </div>
                         <div class="col-auto">
-                            <button type=" submit" class="btn btn-primary mb-2 align-text-bottom" id="search-btn">Search
-                                <i class="fas fa-search"></i></button>
+                            <button type="submit" class="btn btn-primary" id="search-btn">Search <i
+                                    class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </form>
- 
-                <div class="row recent-searches  mt-3">
+
+                <div class="row recent-searches mt-3">
                     <div class="col-sm-12">
                         <h2>Recent searches:</h2>
                     </div>
                 </div>
-                <!-- Previously searched cities -->
                 <div class="row cityList m-0">
-                    <!-- City buttons generated here-->
+                    <!-- searched cities are listed here -->
                 </div>
             </div>
 
         </div>
     </main>
- 
-    <!-- jQuery -->
+
+    <!-- jQuery, moment, and internal js links -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <!-- Moment -->
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>

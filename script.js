@@ -19,9 +19,8 @@ $(document).ready(function () {
    // Store past searched cities
    let pastCities = [];
 
-   // Helper function to sort cities from https://www.sitepoint.com/sort-an-array-of-objects-in-javascript/
    function compare(a, b) {
-       // Use toUpperCase() to ignore character casing
+       // ignores character casing
        const cityA = a.city.toUpperCase();
        const cityB = b.city.toUpperCase();
 
@@ -34,19 +33,17 @@ $(document).ready(function () {
        return comparison;
    }
 
-   // Local storage functions for past searched cities
-
-    // Load events from local storage
+    // Pull cities from local storage
     function loadCities() {
         const storedCities = JSON.parse(localStorage.getItem('pastCities'));
         if (storedCities) {
-            pastCities = storedCities;
+            previousCities = storedCities;
         }
     }
 
     // Store searched cities in local storage
     function storeCities() {
-        localStorage.setItem('pastCities', JSON.stringify(pastCities));
+        localStorage.setItem('previousCities', JSON.stringify(previousCities));
     }
 
    // Functions to build the URL for the OpenWeather API call

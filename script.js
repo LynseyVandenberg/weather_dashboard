@@ -37,13 +37,13 @@ $(document).ready(function () {
     function loadCities() {
         const storedCities = JSON.parse(localStorage.getItem('pastCities'));
         if (storedCities) {
-            previousCities = storedCities;
+            pastCities = storedCities;
         }
     }
 
     // Store searched cities in local storage
     function storeCities() {
-        localStorage.setItem('previousCities', JSON.stringify(previousCities));
+        localStorage.setItem('pastCities', JSON.stringify(pastCities));
     }
 
    // Functions to build the URL for the OpenWeather API call

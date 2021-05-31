@@ -58,10 +58,10 @@ $(document).ready(function () {
         return `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}`;
     }
 
-     // Function to display the last 5 searched cities
+     // Display the last 10 searches
      function displayCities(pastCities) {
         cityListEl.empty();
-        pastCities.splice(5);
+        pastCities.splice(10);
         let sortedCities = [...pastCities];
         sortedCities.sort(compare);
         sortedCities.forEach(function (location) {
@@ -72,7 +72,7 @@ $(document).ready(function () {
         });
     }
     
-    // Function to color the UV Index based on EPA color scale: https://www.epa.gov/sunsafety/uv-index-scale-0
+    // UV color index
     function setUVIndexColor(uvi) {
         if (uvi < 3) {
             return 'green';
@@ -107,7 +107,7 @@ $(document).ready(function () {
             storeCities();
             displayCities(pastCities);
             
-            // Display current weather in DOM elements
+            // Display current weather in DOM 
             cityEl.text(response.name);
             let formattedDate = moment.unix(response.dt).format('L');
             dateEl.text(formattedDate);

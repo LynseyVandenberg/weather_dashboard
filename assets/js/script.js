@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // OpenWeather apiKey
-    const apiKey = '4a8ffc7a0cac821c275982d3435b8d37';
+    const apiKey = config.WEATHER_SECRET;
 
     // Selectors for HTML elements to display weather information
     const cityEl = $('h2#city');

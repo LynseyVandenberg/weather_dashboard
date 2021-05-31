@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // OpenWeather API
+    // OpenWeather apiKey
     const apiKey = '4a8ffc7a0cac821c275982d3435b8d37';
 
     // Selectors for HTML elements to display weather information

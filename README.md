@@ -15,6 +15,6 @@
 
 https://lynseyvandenberg.github.io/weather_dashboard/
 
-<img src="./assets/images/screenshot.jpeg">
+<img src="/assets/images/screenshot.jpeg">
 
 

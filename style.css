@@ -48,7 +48,7 @@ span#uv-index {
 
 div.fiveDay h2 {
     font-size: 1.5rem;
-    color: white;
+    color: black;
 }
 
 div.fiveDay p {
@@ -68,3 +68,4 @@ div.fiveDay p.card-title {
 .text-muted {
     color: white !important;
 }
+
